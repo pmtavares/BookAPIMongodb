@@ -1,0 +1,14 @@
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\bin\Debug\netcoreapp2.2\BooksApiMongo.deps.json
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\bin\Debug\netcoreapp2.2\BooksApiMongo.runtimeconfig.json
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\bin\Debug\netcoreapp2.2\BooksApiMongo.runtimeconfig.dev.json
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\bin\Debug\netcoreapp2.2\BooksApiMongo.dll
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\obj\Debug\netcoreapp2.2\BooksApiMongo.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\obj\Debug\netcoreapp2.2\BooksApiMongo.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\obj\Debug\netcoreapp2.2\BooksApiMongo.RazorAssemblyInfo.cache
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\obj\Debug\netcoreapp2.2\BooksApiMongo.RazorAssemblyInfo.cs
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\obj\Debug\netcoreapp2.2\BooksApiMongo.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\obj\Debug\netcoreapp2.2\BooksApiMongo.AssemblyInfo.cs
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\obj\Debug\netcoreapp2.2\BooksApiMongo.RazorTargetAssemblyInfo.cache
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\bin\Debug\netcoreapp2.2\BooksApiMongo.pdb
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\obj\Debug\netcoreapp2.2\BooksApiMongo.dll
+C:\Users\User\Documents\Visual Studio 2019\BooksApiMongo\obj\Debug\netcoreapp2.2\BooksApiMongo.pdb
