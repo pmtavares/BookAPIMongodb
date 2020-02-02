@@ -32,10 +32,10 @@ namespace BooksApiMongo.Controllers
             return book;
         }
 
-        [HttpPost]
-        public ActionResult<Book> Create(Book book)
+        [HttpPost(Name ="register")]
+        public async Task<ActionResult<Book>> Create(Book book)
         {
-            _bookService.Create(book);
+            await _bookService.Create(book);
 
             return CreatedAtRoute("GetBook", new { id = book.Id.ToString() }, book);
         }
@@ -63,5 +63,25 @@ namespace BooksApiMongo.Controllers
             return NoContent();
 
         }
+
+        [HttpPost("registerAuthor", Name = "registerAuthor")]
+        public async Task<IActionResult> CreateAuthor(Author author)
+        {
+            await _bookService.CreateAuthor(author);
+
+            //return CreatedAtRoute("GetAuthor", new { id = author.Id.ToString() }, author);
+            return  CreatedAtRoute("GetAuthor", new { id = author.Id.ToString() }, author); 
+        }
+
+        [HttpGet("author/{id}", Name = "GetAuthor")]
+        public async Task<ActionResult<Author>> GetAuthor(string id)
+        {
+            var author = await _bookService.GetAuthor(id);
+            if (author == null)
+                return NotFound();
+
+            return author;
+        }
+
     }
 }

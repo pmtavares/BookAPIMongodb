@@ -10,6 +10,7 @@ namespace BooksApiMongo.Services
     public class BookService
     {
         private readonly IMongoCollection<Book> _books;
+        private readonly IMongoCollection<Author> _authors;
 
         public BookService(IBookstoreDatabaseSettings settings)
         {
@@ -17,6 +18,7 @@ namespace BooksApiMongo.Services
             var database = client.GetDatabase(settings.DatabaseName);
 
             _books = database.GetCollection<Book>(settings.BooksCollectionName);
+            _authors = database.GetCollection<Author>(settings.AuthorsCollectionName);
         }
 
         //public List<Book> Get() => _books.Find(book => true).ToList();
@@ -31,9 +33,9 @@ namespace BooksApiMongo.Services
         }
         
 
-        public Book Create(Book book)
+        public async Task<Book> Create(Book book)
         {
-            _books.InsertOne(book);
+            await _books.InsertOneAsync(book);
             return book;
         }
 
@@ -42,5 +44,23 @@ namespace BooksApiMongo.Services
         public void Remove(Book bookIn) => _books.DeleteOne(book => book.Id == bookIn.Id);
 
         public void Remove(string id) => _books.DeleteOne(book => book.Id == id);
+
+
+        //Authors
+        public async Task<List<Author>> GetAuthors()
+        {
+            return await _authors.Find(author => true).ToListAsync();
+        }
+
+        public async Task<Author> GetAuthor(string id)
+        {
+            return await _authors.Find(author => author.Id == id).FirstOrDefaultAsync();
+        }
+
+        public async Task<Author> CreateAuthor(Author author)
+        {
+            await _authors.InsertOneAsync(author);
+            return author;
+        }
     }
 }

@@ -26,7 +26,35 @@ namespace BooksApiMongo.Models
 
 
         [BsonElement("Author")]
-        public string Author { get; set; }
+        public Author Author { get; set; }
 
+        public int AuthorId { get; set; }
+
+        [BsonElement("Authors")]
+        public List<string> Authors { get; set; }
+
+
+
+    }
+
+    public class Author
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+
+        [BsonElement("Name")]
+        [JsonProperty("Name")]
+        public string AuthorName { get; set; }
+
+        [BsonElement("Surname")]
+        [JsonProperty("Surname")]
+        public string AuthorSurname { get; set; }
+
+        [BsonElement("Country")]
+        [JsonProperty("Country")]
+        public string Country { get; set; }
+
+       
     }
 }

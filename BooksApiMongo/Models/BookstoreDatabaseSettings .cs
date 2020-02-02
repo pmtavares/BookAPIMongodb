@@ -10,5 +10,7 @@ namespace BooksApiMongo.Models
         public string BooksCollectionName { get; set; }
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
+
+        public string AuthorsCollectionName { get; set; }
     }
 }
